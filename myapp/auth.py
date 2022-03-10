@@ -1,5 +1,6 @@
 
 from flask import Blueprint, render_template, request, flash
+import flask
 from .models import User
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -23,6 +24,9 @@ def logining():
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
+
+                login_user(user, remember=True)
+                return redirect(url_for('auth.home'))
             else:
                 flash('Incorrect password , try again', category='error')
         else:
@@ -44,7 +48,10 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-        if len(email) < 4:
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash('Email already exists.', category='error')
+        elif len(email) < 4:
             flash('Email must be greater than 3 characters.', category='error')
         elif len(firstName) < 2:
             flash('First name must be greater than 1 character.', category='error')
