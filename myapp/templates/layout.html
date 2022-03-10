@@ -44,21 +44,39 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="/signup">Sign-up</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/logining">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- End -->
-    {% block content %}
-    {% endblock %}
+    <!-- Flash message -->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" , role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" , role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <!-- End -->
+    {% block content %} {% endblock %}
     <footer class="text-center text-lg-start bg-dark text-muted">
       <!-- Section: Social media -->
       <section
@@ -71,7 +89,7 @@
         <!-- Left -->
 
         <!-- Right -->
-        <div style="color: aliceblue;">
+        <div style="color: aliceblue">
           <a href="https://www.facebook.com/" class="me-4 text-reset">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +146,10 @@
               />
             </svg>
           </a>
-          <a href="https://github.com/kittikhun1910/Webapp.git" class="me-4 text-reset">
+          <a
+            href="https://github.com/kittikhun1910/Webapp.git"
+            class="me-4 text-reset"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
