@@ -13,8 +13,8 @@ auth = Blueprint('auth', __name__)
 def home():
     return render_template("home.html")
 
-@auth.route('/login', methods=['GET', 'POST'])
-def login():
+@auth.route('/logining', methods=['GET', 'POST'])
+def logining():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
@@ -23,11 +23,6 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
-
-                # make Flask remember Login session
-                login_user(user, remember=True)
-
-                return redirect(url_for('auth.home'))
             else:
                 flash('Incorrect password , try again', category='error')
         else:
