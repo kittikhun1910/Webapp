@@ -1,5 +1,5 @@
 
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, session
 import flask
 from .models import User
 from . import db
@@ -15,8 +15,9 @@ def home():
     return render_template("home.html")
 
 @auth.route('/logining', methods=['GET', 'POST'])
-def logining():
+def logining():       
     if request.method == 'POST':
+        session['email'] = request.form['email']
         email = request.form.get('email')
         password = request.form.get('password')
 
@@ -38,8 +39,11 @@ def logining():
 @auth.route('/logout')
 def logout():
     logout_user()
-    return redirect (url_for('auth.logining'))
-
+    if 'email' in session:
+        session.pop('email', None)
+        return redirect (url_for('auth.logining'))
+    else:
+        return redirect(url_for('auth.home'))
 
 @auth.route('/signup', methods=['GET', 'POST'])
 def sign_up():
@@ -72,4 +76,9 @@ def sign_up():
 
 @auth.route('/plant')
 def plant():
-    return render_template("plant.html")
+    if 'email' in session:
+        email = session['email']
+        return render_template("plant.html", email=email)
+    else:
+        return redirect(url_for('auth.home'))
+
