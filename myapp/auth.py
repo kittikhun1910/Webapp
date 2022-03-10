@@ -26,7 +26,7 @@ def logining():
                 flash('Logged in successfully!', category='success')
 
                 login_user(user, remember=True)
-                return redirect(url_for('auth.home'))
+                return redirect(url_for('auth.plant'))
             else:
                 flash('Incorrect password , try again', category='error')
         else:
@@ -66,6 +66,10 @@ def sign_up():
             db.session.commit()
             flash('Account created!', category='success')
 
-            return redirect(url_for('auth.home'))
+            return redirect(url_for('auth.plant'))
 
     return render_template("signup.html")
+
+@auth.route('/plant')
+def plant():
+    return render_template("plant.html")
