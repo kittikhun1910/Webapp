@@ -23,6 +23,11 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
+
+                # make Flask remember Login session
+                login_user(user, remember=True)
+
+                return redirect(url_for('auth.home'))
             else:
                 flash('Incorrect password , try again', category='error')
         else:
