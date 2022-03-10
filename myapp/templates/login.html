@@ -8,9 +8,10 @@
   </head>
   <body>
     {% extends "layout.html"%} {% block content %}
+    <div class="container-fluid" style="margin-left: 75px; margin-right: 75px;">
     <form method="POST">
       <h3 align="center">Login</h3>
-      <div class="form-group mb-3">
+      <div class="form-group mb-3" style="width: 30%;">
         <label for="email" class="form-label">E-mail Address</label>
         <input
           type="email"
@@ -20,7 +21,7 @@
           placeholder="Enter E-mail"
         />
       </div>
-      <div class="form-group mb-3">
+      <div class="form-group mb-3" style="width: 30%;">
         <label for="password" class="form-label">Password</label>
         <input
           type="password"
@@ -33,6 +34,7 @@
       <br />
       <button type="submit" class="btn btn-primary mb-3">Login</button>
     </form>
+    </div>
     {% endblock %}
   </body>
 </html>
