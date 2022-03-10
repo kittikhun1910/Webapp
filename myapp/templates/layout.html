@@ -44,20 +44,21 @@
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/signup">Sign-up</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
+              <a class="nav-link" href="/logining">Login</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- End -->
-
+    {% block content %}
+    {% endblock %}
     <footer class="text-center text-lg-start bg-dark text-muted">
       <!-- Section: Social media -->
       <section
@@ -195,7 +196,7 @@
                 <a href="/" class="text-reset">Home</a>
               </p>
               <p>
-                <a href="/login" class="text-reset">Login</a>
+                <a href="/logining" class="text-reset">Login</a>
               </p>
               <p>
                 <a href="/signup" class="text-reset">Signup</a>
