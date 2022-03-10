@@ -37,7 +37,8 @@ def logining():
 
 @auth.route('/logout')
 def logout():
-    return "<h1>Logout</h1>"
+    logout_user()
+    return redirect (url_for('auth.logining'))
 
 
 @auth.route('/signup', methods=['GET', 'POST'])
