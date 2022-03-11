@@ -81,5 +81,13 @@ def plant():
         return render_template("plant.html", email=email)
     else:
         return redirect(url_for('auth.home'))
-        return flash('Account created!', category='success')
+        return flash('Not Ready!', category='error')
 
+@auth.route('/pot')
+def pot():
+    if 'email' in session:
+        email = session['email']
+        return render_template("pot.html", email=email)
+    else:
+        return redirect(url_for('auth.home'))
+        return flash('Not Ready!', category='error')
