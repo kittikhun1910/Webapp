@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-</head>
-<body>
-{% extends "layout.html"%}
-{% block content %}
-<!-- End -->
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <img src="/static/plant_1.png" alt="" style="height: 20rem; width: 20rem"> 
-    </div>
-    <div class="col">
-      <form method="POST" style="margin-top: 10px;">
-        <h1>Login</h1>
-        <div class="form-group mb-3" style="width: 200px;"> 
-            <label for="email" class="form-label">E-mail Address</label>
-            <input 
+  </head>
+  <body>
+    {% extends "layout.html"%} {% block content %}
+    <!-- End -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h4>ACCOUNT</h4>
+          <p style="font-size: 45px; font-weight: 600; text-align: left">Login your account</p>
+          <p class="col">Don’t have an account?  <a class="nav-link link-success" href="/signup"> Create one --></a> </p>
+        </div>
+        <div class="col">
+          <form method="POST" style="margin-top: 35px">
+            <h1>Login</h1>
+            <div class="form-group mb-3" style="width: 500px;" >
+              <label for="email" class="form-label" style="margin-top: 20px;">E-mail Address</label>
+              <input
                 type="email"
                 class="form-control"
                 id="email"
                 name="email"
                 placeholder="Enter E-mail"
-            />
-        </div>
-        <div class="form-group mb-3" style="width: 200px;">
-            <label for="password" class="form-label">Password</label>
-            <input 
+                style="height: 65px;"
+              />
+            </div>
+            <div class="form-group mb-3" style="width: 500px">
+              <label for="password" class="form-label">Password</label>
+              <input
                 type="password"
                 class="form-control"
                 id="password"
                 name="password"
                 placeholder="Enter password"
-            />
+                style="height: 65px;"
+              />
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success mb-3" style="width: 500px; height:65px; ">Login</button>
+          </form>
         </div>
-        <br>
-        <button type="submit" class="btn btn-primary mb-3">Login</button>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
-{% endblock %}
-</body>
+    {% endblock %}
+  </body>
 </html>
