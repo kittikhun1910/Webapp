@@ -41,9 +41,9 @@ def logout():
     logout_user()
     if 'email' in session:
         session.pop('email', None)
-        return redirect (url_for('auth.logining'))
+        return redirect (url_for('auth.home'))
     else:
-        return redirect(url_for('auth.home'))
+        return redirect(url_for('auth.logining',))
 
 @auth.route('/signup', methods=['GET', 'POST'])
 def sign_up():
@@ -81,4 +81,5 @@ def plant():
         return render_template("plant.html", email=email)
     else:
         return redirect(url_for('auth.home'))
+        return flash('Account created!', category='success')
 
