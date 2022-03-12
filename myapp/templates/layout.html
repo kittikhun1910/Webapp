@@ -19,7 +19,7 @@
   <main>
     <!-- Top Navigation Bar -->
     <header>
-      <div class="px-3 py-2 bg-light text-drak">
+      <div class="px-3 py-2 bg-light text-drak container marketing">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-dark text-decoration-none">
@@ -69,7 +69,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-dark">
+                <a href="/customer" class="nav-link text-dark">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
                     class="bi bi-people-fill" viewBox="0 0 16 16">
                     <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -142,7 +142,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      min-width: 100%;
+      min-width: 1490px;
       height: 29rem;
     }
 
@@ -218,7 +218,7 @@
       outline: 0;
     }
   </style>
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 40px">
+  <div id="myCarousel" class="carousel slide container marketing" data-bs-ride="carousel" style="margin-top: 40px">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
         aria-label="Slide 1"></button>
@@ -228,7 +228,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="/static/plant_2.png" alt="" class="bd-placeholder-img-lg" />
-        <div class="container">
+        <div class="container-fluid">
           <div class="carousel-caption text-start">
             <h1>Example headline.</h1>
             <p>
@@ -247,7 +247,7 @@
           <rect width="100%" height="100%" fill="#777" />
         </svg>
 
-        <div class="container">
+        <div class="container-fluid">
           <div class="carousel-caption">
             <h1>Another example headline.</h1>
             <p>
@@ -266,7 +266,7 @@
           <rect width="100%" height="100%" fill="#777" />
         </svg>
 
-        <div class="container">
+        <div class="container-fluid">
           <div class="carousel-caption text-end">
             <h1>One more for good measure.</h1>
             <p>
@@ -309,7 +309,7 @@
   {% endif %} {% endfor %} {% endif %} {% endwith %}
   <!-- End -->
   {% block content %} {% endblock %}
-  <footer class="text-center text-lg-start bg-light text-muted container-fluid" style="margin-top: 75px">
+  <footer class="text-center text-lg-start bg-light text-muted container marketing" style="margin-top: 75px">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->
