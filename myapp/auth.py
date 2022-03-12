@@ -91,3 +91,12 @@ def pot():
     else:
         return redirect(url_for('auth.home'))
         return flash('Not Ready!', category='error')
+
+@auth.route('/customer')
+def customer():
+    if 'email' in session:
+        email = session['email']
+        return render_template("custo.html", email=email)
+    else:
+        return redirect(url_for('auth.home'))
+        return flash('Not Ready!', category='error')
