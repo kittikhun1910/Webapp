@@ -26,18 +26,13 @@
       }
     </style>
     <main>
-      <section class="py-5 text-center container marketing">
-        <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light"> Hello! {{email}} </h1>
-            <p class="lead text-muted">All plants are imported from the breeding grounds. And your plants will arrive in happy and healthy conditions.</p>
-          </div>
-        </div>
-      </section>
-    
+      <div class="bg-success bg-opacity-25 py-5 text-center container marketing" style="height:300px;">
+        <h3>Welcome {{session['name']}} to La Plante </h3>
+        <img src='{{session['pic']}}' style="border-radius: 50%; width: 100; height:100">
+        <h2 class="fw-light" style="margin: 20px">{{email}}</h2>
+      </div>
       <div class="album py-5 bg-light">
         <div class="container">
-    
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
