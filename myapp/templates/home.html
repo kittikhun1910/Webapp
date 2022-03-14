@@ -72,7 +72,13 @@
   margin-left: .75rem;
 }
 /* rtl:end:ignore */
-
+.carousel-item1 > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 1490px;
+  height: 1000px;
+}
 
 /* Featurettes
 ------------------------- */
@@ -102,34 +108,23 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row"> 
-      <h1>The beat  </h1>
+      <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#30A88E; margin-top:10px;" > Ready to Ship </h1>
       <div class="col-lg-4">
-        <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-bs-ride="carousel" style="width: 420px; height: 460px;">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
+        <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-bs-ride="carousel" style="width: 420px; height: 410px; margin-top:35px;">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/rubber.png" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/DiamondBay.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/evergreen.png" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
               </div>
             </div>
           </div>
@@ -141,36 +136,31 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <a type="button" class="btn btn-secondary" style="margin-top: 60px;" href="/plant">Previwes</a>
+          <div class="card-body bg-success bg-opacity-25 " style="margin-top: 10px; color:black;  margin-bottom:10px" >
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a type="button" class="btn btn-success" href="/plant">Previwes</a>
+          </div>
         </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <div id="carouselExampleCaptions1" class="carousel slide bg-dark" data-bs-ride="carousel" style="width: 420px; height: 460px;">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
+        <div id="carouselExampleCaptions1" class="carousel slide bg-light data-bs-ride="carousel" style="width: 420px; height: 410px; margin-top:120px;">
+          <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#30A88E; margin-bottom:10px;" > Ready to Ship </h1>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/pot6.png" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/pot7.png" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/pot8.png" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
               </div>
             </div>
           </div>
@@ -182,36 +172,31 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <a type="button" class="btn btn-secondary" style="margin-top: 60px;" href="/pot">Previwes</a>
+          <div class="card-body bg-info bg-opacity-25 " style="margin-top: 10px; color:black;  margin-bottom:10px">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a type="button" class="btn btn-info" href="/pot">Previwes</a>
+          </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div id="carouselExampleCaptions2" class="carousel slide bg-dark" data-bs-ride="carousel" style="width: 420px; height: 460px;" >
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
+      <div class="col-lg-4" style="margin-bottom: 20px;">
+        <div id="carouselExampleCaptions2" class="carousel slide bg-light" data-bs-ride="carousel" style="width: 420px; height: 410px; margin-top:230px;" >
+          <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#30A88E; margin-bottom:10px;" > Ready to Ship </h1>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/custo_1.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/custo_2.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
+              <img src="static/custo_3.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
               </div>
             </div>
           </div>
@@ -223,7 +208,12 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <a type="button" class="btn btn-secondary" style="margin-top: 60px;" href="/customer">Previwes</a>
+          <div class="card-body bg-primary bg-opacity-25 " style="margin-top: 10px; color:black; margin-bottom:10px">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a type="button" class="btn btn-primary" href="/customer">Previwes</a>
+          </div>
         </div>
 
       </div><!-- /.col-lg-4 -->
@@ -232,13 +222,15 @@
 
     <!-- START THE FEATURETTES -->
 
-    <hr class="featurette-divider">
+    <hr class="featurette-divider" style="margin-bottom: 10%; margin-top:260px">
 
     <div class="row featurette">
-      <div class="col-md-7">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      <div class="col-md-6">
+        <div class="card d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start " style="width: auto;">
+          <img src="/static/map_1.png" class="card-img-top" alt="...">
+        </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" style="margin-left: 10px; margin-top:20px;">
         <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
         <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
 
@@ -249,8 +241,9 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#30A88E" >To be human is to experience biophilia.</h1>
+          <span class="text-muted" style="font-size: 16px; margin-bottom:10px;">[bio-feelya] - That craving for nature, in all forms.</span>
+        <p class="lead" style="margin-top: 10px;">Enjoy plants, pots, botanicals and more delivered to your door. Our plant care library and virtual workshops provide support and encouragement to all plant parents.</p>
       </div>
       <div class="col-md-5 order-md-1">
       </div>
@@ -260,12 +253,81 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/DiamondBay.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/5.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a short card.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/9.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/10.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+      <div class="col-lg-5" >
+        <div id="carouselExampleControls6" class="carousel slide  bg-light" data-bs-ride="carousel" style="width: auto; height: auto;">
+          <div class="carousel-inner"  style="width: auto; height: 788px;">
+            <div class="carousel-item active" >
+              <img src="static/Phome_3.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_2.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_5.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_6.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_7.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_8.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body bg-light " style="margin-top: 0px; color:black;">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a type="button" class="btn btn-secondary" href="/plant">Previwes</a>
       </div>
     </div>
 
