@@ -1,0 +1,5 @@
+.vscode
+myapp/__pycache__
+myapp/database.db
+myapp/client_secret.json
+__pycache__
