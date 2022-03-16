@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
+    <link rel="shortcut icon" href="/static/icon.ico">
 </head>
 <body>
 {% extends "layout.html"%} {% block content %}
-<div class="container">
+<title>Signup</title>
+<div class="container marketing">
   <div class="row">
     <div class="col">
       <div class="col">
         <h4>REGISTER</h4>
-        <p style="font-size: 45px; font-weight: 600; text-align: left">Create Account</p>
+        <p style="font-size: 45px; font-weight: 600; text-align: left; color:#30A88E">Create Account</p>
         <p class="col">Do you already have an account?  <a class="nav-link link-success" href="/logining"> Login --></a> </p>
       </div>
     </div>
     <div class="col">
       <form method="POST" style="margin-top: 35px">
-        <h1> Sign Up </h1>
-        <div class="form-group mb-3" style="width: 500px;">
+        <h1 style="color:#30A88E""> Sign Up </h1>
+        <div class="form-group mb-3" style="width: 500px; margin-top: 35px">
           <label for="email" class="form-label">E-mail Address</label>
           <input
             type="email"

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="shortcut icon" href="/static/icon.ico">
 </head>
 <body>
 {% extends "layout.html"%}
 {% block content %}
+<title>Home</title>
 <style>
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -71,7 +72,13 @@
   margin-left: .75rem;
 }
 /* rtl:end:ignore */
-
+.carousel-item1 > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 1490px;
+  height: 1000px;
+}
 
 /* Featurettes
 ------------------------- */
@@ -100,42 +107,134 @@
   <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
-    <div class="row">
+    <div class="row"> 
+      <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#30A88E; margin-top:10px;" > New Arrivals </h1>
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-bs-ride="carousel" style="width: 420px; height: 410px; margin-top:35px;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="static/rubber.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="static/DiamondBay.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="static/evergreen.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="card-body bg-success bg-opacity-25 " style="margin-top: 10px; color:black;  margin-bottom:10px" >
+            <h5 class="card-title">Large Plants</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Trees are one thing that defines your lifestyle.</p>
+            <a type="button" class="btn btn-success" href="/plant">Previews</a>
+          </div>
+        </div>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <div id="carouselExampleCaptions1" class="carousel slide bg-light data-bs-ride=carousel" style="width: 420px; height: 410px; margin-top:120px;">
+          <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#2ddad1; margin-bottom:10px;" > Ready to Ship </h1>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="static/pot6.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="static/pot7.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="static/pot8.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="card-body bg-info bg-opacity-25 " style="margin-top: 10px; color:black;  margin-bottom:10px">
+            <h5 class="card-title">Planter Pots</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Find a pots plant style that's right for you.</p>
+            <a type="button" class="btn btn-info" href="/pot" style="color: aliceblue;">Previews</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" style="margin-bottom: 20px;">
+        <div id="carouselExampleCaptions2" class="carousel slide bg-light" data-bs-ride="carousel" style="width: 420px; height: 410px; margin-top:230px;" >
+          <h1 class="featurette-heading" style="font-size: 45px; font-weight: 500; color:#186dce; margin-bottom:10px;" > Lifestyle </h1>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="static/custo_1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="static/custo_2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="static/custo_3.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="card-body bg-primary bg-opacity-25 " style="margin-top: 10px; color:black; margin-bottom:10px">
+            <h5 class="card-title">Lifestyle About Home</h5>
+            <h6 class="card-subtitle mb-2 text-muted">card-subtitle</h6>
+            <p class="card-text">Find the home decoration style that is right for you.</p>
+            <a type="button" class="btn btn-primary" href="/customer">Previews</a>
+          </div>
+        </div>
 
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
 
     <!-- START THE FEATURETTES -->
 
-    <hr class="featurette-divider">
+    <hr class="featurette-divider" style="margin-bottom: 10%; margin-top:220px">
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+    <div class="row featurette" >
+      <div class="col-md-6">
+        <div class="card d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start " style="width: auto;border-radius: 5%;">
+          <img src="/static/map_1.png" class="card-img-top" alt="..." style="border-radius: 5%;">
+        </div>
       </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      <div class="col-md-5" style="margin-left: 10px; margin-top:20px;">
+        <h1 class="featurette-heading" style=" font-weight: 500; color:#30A88E"> Locations </h1>
+        <span class="text-muted" style="font-size: 16px; margin-bottom:10px;">It’ll blow your mind.</span>
+        <p class="lead">Convenient, there is a wide parking area. next to the international botanical garden And there is enough relaxation area for people to sit and relaxand enjoy a variety of plants and garden decorations that look elegant
+          and enjoy a variety of plants and garden decorations that look elegant.</p>
 
       </div>
     </div>
@@ -144,8 +243,9 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        <h1 class="featurette-heading" style=" font-weight: 500; color:#30A88E" >To be human is to experience biophilia.</h1>
+          <span class="text-muted" style="font-size: 16px; margin-bottom:10px;">[bio-feelya] - That craving for nature, in all forms.</span>
+        <p class="lead" style="margin-top: 10px;">Enjoy plants, pots, botanicals and more delivered to your door. Our plant care library and virtual workshops provide support and encouragement to all plant parents.</p>
       </div>
       <div class="col-md-5 order-md-1">
       </div>
@@ -155,20 +255,87 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/DiamondBay.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">DiamondBay</h5>
+                <p class="card-text">DiamondsBay is easy care and can be maintained at the lower light levels often found in the home or office environment.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/5.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Peach Lily</h5>
+                <p class="card-text">It’s toxic to children and pets if consumed, so do keep it out of reach.Like many popular indoor plants, peace lilies enjoy medium to low light.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/9.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Monstera Deliciosa</h5>
+                <p class="card-text">They can tolerate many levels of sunlight and even grow under fluorescent lights.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="static/10.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Spider Plant</h5>
+                <p class="card-text">Available in green or variegated varieties, these spiderettes often start out as small white flowers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+      <div class="col-lg-5" >
+        <div id="carouselExampleControls6" class="carousel slide  bg-light" data-bs-ride="carousel" style="width: auto; height: auto;">
+          <div class="carousel-inner"  style="width: auto; height: 788px;">
+            <div class="carousel-item active" >
+              <img src="static/Phome_3.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_2.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_5.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_6.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_7.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+            <div class="carousel-item " >
+              <img src="static/Phome_8.jpg" class="d-block w-100" alt="..." style="width:auto;height:auto;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body bg-light " style="margin-top: 0px; color:black;">
+          <h5 class="card-title">Easy Care</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Tree care is one of the things we should do to make it last longer.</p>
+          <a type="button" class="btn btn-secondary" href="/plant">Previwes</a>
       </div>
     </div>
 
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->
-
-  </div>
 </main>
   
 {% endblock %}
